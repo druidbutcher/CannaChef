@@ -33,7 +33,13 @@ session_start();
 	//connect to db
  	$username = "root";
 	$password = "root";
-	$database = "cc";
+  if (isset($_SESSION['demouser'])) {
+    $database = "ccdemo";
+    }else{
+      $database = "cc";
+    }
+   echo$database;
+
 
 $mysqli = new mysqli("localhost:3306", $username, $password, $database);
 if ($mysqli->connect_error) {

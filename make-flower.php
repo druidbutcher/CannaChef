@@ -7,6 +7,25 @@
 </head>
 
 <body style="background-color:greenyellow;">
+<?php
+session_start();
+if (isset($_SESSION['demouser'])) {
+ ?>
+ <div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+    <a href="index.php">Home</a>
+
+    </div>
+  </div>
+</div>
+ <?php
+ }else{
+  ?>
+
 <div class="navbar">
   <div class="dropdown">
     <button class="dropbtn">Dropdown
@@ -21,7 +40,9 @@
     </div>
   </div>
 </div>
-<?php session_start();
+<?php
+ }
+ session_start();
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 		$userid = $_SESSION['id'];

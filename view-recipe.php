@@ -45,7 +45,12 @@ session_start();
 
     $username = "root";
     $password = "root";
-    $database = "cc";
+    if (isset($_SESSION['demouser'])) {
+      $database = "ccdemo";
+      }else{
+        $database = "cc";
+      }
+     echo$database;
     
     $mysqli = new mysqli("localhost:3306", $username, $password, $database);
     
@@ -140,10 +145,17 @@ if   ($fatty == 1){
 
 }
 }
-
-  ?>
+if (isset($_SESSION['demouser'])) {
+ ?>
+  <form method="POST" action="wipeit.php">
+  <input type="submit" id="submit" value="Go again?" name="submit">
+  <?php
+  }else{
+   ?>
+ 
   <form method="POST" action="pick-flower.php">
 <input type="submit" id="submit" value="Make another recipe" name="submit">
 </form><br>
+<?php } ?>
   </body>
 </html>

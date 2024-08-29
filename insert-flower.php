@@ -13,6 +13,7 @@
 session_start();
 
         $userid = $_SESSION['id'];
+        $demouser = $_SESSION['demouser'];
         $flowerName = $_POST["flowername"];
         $thcPercent = $_POST["thcpercent"];
         $flowerAmount = $_POST["amountflower"];
@@ -52,10 +53,15 @@ session_start();
         
 		return String(format: "%.2f", convertToGram)
 */
-
+//$demouser = $_SESSION['demouser'];
 $username = "root";
 $password = "root";
-$database = "cc";
+if (isset($_SESSION['demouser'])) {
+$database = "ccdemo";
+}else{
+  $database = "cc";
+}
+
 
 $mysqli = new mysqli("localhost:3306", $username, $password, $database);
 //die("Im here");

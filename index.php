@@ -18,23 +18,21 @@
     </button>
     <div class="dropdown-content">
     <a href="index.php">Home</a>
-      <a href="make-flower.php">Make flower product</a>
-      <a href="pick-flower.php">Connect Flower w/ recipe 2</a>
-      <a href="pick-recipe-2view.php">View Recipe</a>
-      <a href="recipe-maker.php">Make Recipe(back office only)</a>
+  
     </div>
   </div>
 </div>
 
 
   <?php 
-  session_start();
+  //session_start();
 
-        $userid = $_SESSION['id'];
+       // $userid = $_SESSION['id'];
   ?>
   
   <a href="register.php">Register</a><br>
   <a href="Login.php">Login</a><br>
+  <a href="demo-login.php">Run in Demo Mode</a><br>
 
   </body>
 </html>

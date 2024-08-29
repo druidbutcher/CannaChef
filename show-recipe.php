@@ -12,6 +12,7 @@ table, th, td {
 
 </style>
 <link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
@@ -30,6 +31,8 @@ table, th, td {
   </div>
 </div>
  <?php
+
+
 session_start();
   $userid = $_SESSION['id'];
   $userflowerid = $_POST['userflowerid'];
@@ -70,6 +73,7 @@ $numberServings = $row["numberServings"];
 $thcPerServing = $row["thcPerServing"];
 $totalThc = $row["totalThc"];
 $flowerName = $row["flowerName"];
+$directions = $row["directions"];
 //echo $totalThc;
 //echo $thcPerServing;
     $totalThcPerRec = $numberServings * $thcPerServing;
@@ -93,7 +97,7 @@ echo '
   <th>Image</th>
   <th>Number of Servings</th>
   <th>THC per Serving</th>
-  <th>Total cup THC in recipe</th>
+  <th>Total THC per cup in recipe</th>
   <th>Flower name</th>
 </tr>
 <tr>
@@ -125,11 +129,12 @@ While($row=mysqli_fetch_array($result2))
     <br>';
     $fatty = $row["isFat"];
     $oldfat = $row["amount"];
+
 if   ($fatty == 1){
     ?>
     <h1 style="font-size: 1rem; color: #ec3a13">
     <?php
-    echo ("Fat adjustment!!")."</h1>";
+    echo ("THC adjustment!!")."</h1>";
     $newfat = $oldfat - $totalThcFatPerRec;
     echo ("Now Use:  ").$row["ingredient"];
     echo ("  ").$newfat;
@@ -143,7 +148,8 @@ if   ($fatty == 1){
 
 }
 }
-
+echo nl2br($directions);
+//echo $directions;
   ?>
   <form method="POST" action="pick-recipe-2view.php">
 <input type="submit" id="submit" value="View another recipe" name="submit">

@@ -21,7 +21,12 @@ session_start();
 
 $username = "root";
 $password = "root";
-$database = "cc";
+if (isset($_SESSION['demouser'])) {
+  $database = "ccdemo";
+  }else{
+    $database = "cc";
+  }
+ echo$database;
 
 $mysqli = new mysqli("localhost:3306", $username, $password, $database);
 //die("Im here");
@@ -68,7 +73,7 @@ $row2 = mysqli_fetch_assoc($result2);
     <img src="<?php echo $row["image"]; ?>"width="100" height="100"><br>
     <label for="numberServings">Number of Servings:</label><br>
   <input type="text" id="numberServings" name="numberServings" value=<?php echo $row['numberServings'];  ?>><br>
-      <label for="thcPerServing">THC Per Serving :</label><br>
+      <label for="thcPerServing">mgs of THC Per Serving *10mg is nice and easy*:</label><br>
   <input type="text" id="thcPerServing" name="thcPerServing"><br>
   <input type="hidden" id="userflowerid" name="userflowerid" value = "<?php echo $last_id; ?>"><br>
   <input type="hidden" id="totalThc" name="totalThc" value = "<?php echo $row2["totalThc"]; ?>"><br>

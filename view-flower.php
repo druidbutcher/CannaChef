@@ -15,25 +15,6 @@ table, th, td {
 </head>
 
 <body>
-<?php
-session_start();
-if (isset($_SESSION['demouser'])) {
- ?>
- <div class="navbar">
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-    <a href="index.php">Home</a>
-
-    </div>
-  </div>
-</div>
- <?php
- }else{
-  ?>
-
 <div class="navbar">
   <div class="dropdown">
     <button class="dropbtn">Dropdown
@@ -49,27 +30,22 @@ if (isset($_SESSION['demouser'])) {
   </div>
 </div>
 <?php
- }
-//session_start();
+session_start();
  $userid = $_SESSION['id'];
- $flowerid= $_SESSION['fid'];
- //$demouser = $_SESSION['demouser'];
+
  $username = "root";
  $password = "root";
- if (isset($_SESSION['demouser'])) {
- $database = "ccdemo";
- }else{
-   $database = "cc";
- }
-echo$database;
+ $database = "cc";
+
 $mysqli = new mysqli("localhost:3306", $username, $password, $database);
 if ($mysqli->connect_error) {
   die("Connection failed: " . $mysqli->connect_error);
 }
+$query1 = "SELECT DISTINCT flower.id, flower.fat, flower.flowerName, flower.thcPercent, flower.totalThc, flower.totalPerTsp, flower.fatAmount FROM flower INNER JOIN userflower ON flower.id = userflower.flowerid WHERE userflower.userid = '$userid'";
 
-$query1 = "SELECT * FROM flower WHERE id = '$flowerid'";
 $result1 = $mysqli->query($query1);
-$row1=mysqli_fetch_array($result1);
+While($row1=mysqli_fetch_array($result1))
+{ 
 echo '
 <table style="width:70%">
 <tr>
@@ -92,37 +68,11 @@ echo '
 </tr>
 </table>
 <br>
+
 '; 
-unset($_SESSION['fid']);
 
-$query = "SELECT DISTINCT userflower.flowerid , flower.id, flower.flowerName , flower.thcPercent FROM flower INNER JOIN userflower ON flower.id = userflower.flowerid ORDER BY flower.id DESC ";
-
-$result = $mysqli->query($query);
-
-
-	
-?>
-<h3>Choose a Flower</h3>
-		<form action="choose-recipe.php" method="POST">
-		
-<?php
-echo '<select name= "flowerid" id= "flowerid">';
-//echo "<option>--Users--</option";	
-While($row=mysqli_fetch_array($result))
-{ 
-	echo"<option>$row[flowerName]-$row[thcPercent]% --id:$row[flowerid] </option>";
 }
-	?>
-
-</select>
-
-<input type="submit" id="submit" value="Groove on to recipes" name="submit"><br><br>
-</form><br>
-
-
-<form method="POST" action="make-flower.php">
-<input type="submit" id="submit" value="Add another flower" name="submit">
-</form><br>
+?>
 
 
 </body>
