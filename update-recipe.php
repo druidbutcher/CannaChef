@@ -4,44 +4,44 @@
 <meta charset="UTF-8">
 <title>Choose Recipe</title>
 <link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
  <?php
 session_start();
+  $demouser = $_POST['user'];
   $userid = $_SESSION['id'];
   $flowerid = $_POST['flowerid'];
   $recipeid = $_POST['recipeid'];
   $rid = substr($recipeid,-8);
   $recipeid = preg_replace("/[^0-9,.]/", "", $rid)."\n";
-  
-  //echo $userid;
-  //echo $flowerid;
-  //echo $recipeid;
 
-$username = "root";
-$password = "root";
-if (isset($_SESSION['demouser'])) {
-  $database = "ccdemo";
+
+
+  if (empty($demouser)) {
+    include('conn.php');
   }else{
-    $database = "cc";
+    include('conndemo.php');
   }
- echo$database;
+  
+  
+  $mysqli = new mysqli($hostname, $username, $password, $database);
+  // Check connection
+  echo $database;
+ // die ("im dead again");
+  if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+  }else{
+  //echo ("good connection!");
+  }
+  
 
-$mysqli = new mysqli("localhost:3306", $username, $password, $database);
-//die("Im here");
-
-
-// Check connection
-if ($mysqli->connect_error) {
-  die("Connection failed: " . $mysqli->connect_error);
-}
-//echo "Connected successfully";
 $query = "INSERT INTO userflower (userid, flowerid, recipeid) VALUES ('$userid', '$flowerid', '$recipeid')";
-
+//echo $query;
 if (mysqli_query($mysqli, $query)) {
     $last_id = mysqli_insert_id($mysqli);
-  //echo "New record created successfully";
+ // echo "New record created successfully";
 } else {
   echo "Error: " . $query . "<br>" . mysqli_error($mysqli);
 }
@@ -77,6 +77,7 @@ $row2 = mysqli_fetch_assoc($result2);
   <input type="text" id="thcPerServing" name="thcPerServing"><br>
   <input type="hidden" id="userflowerid" name="userflowerid" value = "<?php echo $last_id; ?>"><br>
   <input type="hidden" id="totalThc" name="totalThc" value = "<?php echo $row2["totalThc"]; ?>"><br>
+  <input type="hidden" id= "user" name="user" value = "<?php echo $demouser; ?>">
   <input type="submit" id="submit" value="Lets see it!!" name="submit">
 </form>
 </body>

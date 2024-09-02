@@ -1,0 +1,605 @@
+[30-Aug-2024 11:46:13 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 11:46:21 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 11:46:23 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 5
+[30-Aug-2024 11:46:23 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php:9
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php(9): mysqli->__construct('localhost:3306', 'root', Object(SensitiveParameterValue), 'ccdemo')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 9
+[30-Aug-2024 11:58:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 5
+[30-Aug-2024 11:58:14 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 30
+[30-Aug-2024 11:58:18 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 5
+[30-Aug-2024 11:58:18 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 30
+[30-Aug-2024 11:59:31 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 11
+[30-Aug-2024 11:59:31 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 46
+[30-Aug-2024 11:59:31 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 46
+[30-Aug-2024 12:05:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:05:22 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:05:22 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php:8
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php(8): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'cc')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 8
+[30-Aug-2024 12:11:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:11:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:11:21 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:11:21 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 38
+[30-Aug-2024 12:12:46 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:12:46 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 38
+[30-Aug-2024 12:13:30 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:13:30 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 38
+[30-Aug-2024 12:14:36 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:14:36 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 38
+[30-Aug-2024 12:15:58 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:15:58 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 38
+[30-Aug-2024 12:18:28 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:18:28 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:18:40 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 12:18:40 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 38
+[30-Aug-2024 16:49:18 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 16:56:32 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 16:56:58 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 16:57:05 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 5
+[30-Aug-2024 16:57:05 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 30
+[30-Aug-2024 16:57:35 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 16:57:54 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[30-Aug-2024 16:57:54 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 38
+[30-Aug-2024 17:04:46 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 17:04:50 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 7
+[30-Aug-2024 17:04:50 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 33
+[30-Aug-2024 17:04:54 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 7
+[30-Aug-2024 17:04:54 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 33
+[30-Aug-2024 17:09:00 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 17:09:08 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 7
+[30-Aug-2024 17:09:11 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 12
+[30-Aug-2024 17:09:11 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[30-Aug-2024 17:09:11 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[30-Aug-2024 17:10:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[30-Aug-2024 17:10:14 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:10:14 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:10:14 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:10:14 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:10:14 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[30-Aug-2024 17:10:14 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[30-Aug-2024 17:10:14 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php:10) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 91
+[30-Aug-2024 17:11:47 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[30-Aug-2024 17:11:47 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:11:47 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:11:47 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:11:47 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:11:47 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[30-Aug-2024 17:11:47 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[30-Aug-2024 17:11:47 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php:10) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 91
+[30-Aug-2024 17:12:12 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[30-Aug-2024 17:12:12 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:12:12 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:12:12 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:12:12 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:12:12 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[30-Aug-2024 17:12:12 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[30-Aug-2024 17:12:12 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php:10) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 91
+[30-Aug-2024 17:13:04 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[30-Aug-2024 17:13:04 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:13:04 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:13:04 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:13:04 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:13:04 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[30-Aug-2024 17:13:04 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[30-Aug-2024 17:13:04 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php:10) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 91
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 19
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 54
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 54
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 55
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 55
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 84
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 85
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 86
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 87
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 88
+[30-Aug-2024 17:13:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 89
+[30-Aug-2024 17:14:00 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 11
+[30-Aug-2024 17:14:00 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 17:14:00 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 17:14:00 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 17:14:00 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 17:14:00 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php:62
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php(62): mysqli->__construct('localhost:3306', 'root', Object(SensitiveParameterValue), 'cc')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 62
+[30-Aug-2024 17:14:09 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 17:14:21 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[30-Aug-2024 17:14:21 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:14:21 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 17:14:21 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:14:21 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 17:14:21 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[30-Aug-2024 17:14:21 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[30-Aug-2024 17:14:28 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 11
+[30-Aug-2024 17:14:28 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 17:14:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 17:14:28 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 17:14:28 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 17:14:28 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php:62
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php(62): mysqli->__construct('localhost:3306', 'root', Object(SensitiveParameterValue), 'cc')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 62
+[30-Aug-2024 17:15:32 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 11
+[30-Aug-2024 17:15:32 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 17:15:32 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 17:15:32 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 17:15:32 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 17:15:32 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php:62
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php(62): mysqli->__construct('localhost:3306', 'root', Object(SensitiveParameterValue), 'cc')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 62
+[30-Aug-2024 17:16:47 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 11
+[30-Aug-2024 17:16:47 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 17:16:47 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 17:16:47 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 17:16:47 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 17:16:53 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 11
+[30-Aug-2024 17:16:53 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 12
+[30-Aug-2024 17:16:53 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 12
+[30-Aug-2024 17:16:57 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 17:16:57 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 17:16:57 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 17:16:57 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 18:05:11 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 18:05:17 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 7
+[30-Aug-2024 18:05:17 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 12
+[30-Aug-2024 18:05:17 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[30-Aug-2024 18:05:17 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 19
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 54
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 54
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 55
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 55
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 84
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 85
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 86
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 87
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 88
+[30-Aug-2024 18:05:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 89
+[30-Aug-2024 18:06:08 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 11
+[30-Aug-2024 18:06:08 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 18:06:08 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 18:06:08 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 18:06:08 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 18:06:12 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 11
+[30-Aug-2024 18:06:12 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 12
+[30-Aug-2024 18:06:12 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 12
+[30-Aug-2024 18:06:17 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 18:06:17 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 18:06:17 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 18:06:17 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 11
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 46
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 46
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 47
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 47
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 48
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 48
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Undefined array key "userflower.id" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 67
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Undefined variable $numberServings in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 78
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Undefined array key "userflower.id" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 83
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Undefined array key "userflower.id" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 83
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Undefined array key "userflower.id" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 83
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Undefined array key "userflower.id" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 83
+[30-Aug-2024 18:08:03 America/Boise] PHP Warning:  Undefined array key "userflower.id" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-recipe-2view.php on line 83
+[30-Aug-2024 18:08:13 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 18:08:45 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[30-Aug-2024 18:08:45 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 18:08:45 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 18:08:45 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 18:08:45 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 18:08:45 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[30-Aug-2024 18:08:45 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[30-Aug-2024 18:09:25 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 11
+[30-Aug-2024 18:09:25 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 18:09:25 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 18:09:25 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 18:09:25 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 20:10:41 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[30-Aug-2024 20:10:50 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 7
+[30-Aug-2024 20:10:51 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 12
+[30-Aug-2024 20:10:51 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[30-Aug-2024 20:10:51 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 19
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 54
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 54
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 55
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 55
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 84
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 85
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 86
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 87
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 88
+[30-Aug-2024 20:11:05 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 89
+[30-Aug-2024 20:11:08 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 11
+[30-Aug-2024 20:11:08 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 20:11:08 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 20:11:08 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 20:11:08 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 20:11:09 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 11
+[30-Aug-2024 20:11:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 12
+[30-Aug-2024 20:11:09 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 12
+[30-Aug-2024 20:11:15 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:11:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:11:15 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:11:15 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:15:00 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:15:00 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:15:00 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:15:00 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:16:17 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:16:17 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:16:17 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:16:17 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:17:44 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:17:44 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:17:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:17:44 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:19:42 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:19:42 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:19:42 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:19:42 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:20:52 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:20:52 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:20:52 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:20:52 America/Boise] PHP Warning:  Undefined array key "name" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 115
+[30-Aug-2024 20:20:52 America/Boise] PHP Warning:  Undefined array key "image" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 116
+[30-Aug-2024 20:20:52 America/Boise] PHP Warning:  Undefined array key "numberServings" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 117
+[30-Aug-2024 20:20:52 America/Boise] PHP Warning:  Undefined array key "thcPerServing" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 118
+[30-Aug-2024 20:20:52 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:21:00 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:21:00 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:21:00 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:21:00 America/Boise] PHP Warning:  Undefined array key "name" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 115
+[30-Aug-2024 20:21:00 America/Boise] PHP Warning:  Undefined array key "image" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 116
+[30-Aug-2024 20:21:00 America/Boise] PHP Warning:  Undefined array key "numberServings" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 117
+[30-Aug-2024 20:21:00 America/Boise] PHP Warning:  Undefined array key "thcPerServing" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 118
+[30-Aug-2024 20:21:00 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:21:41 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:21:41 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:21:41 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:21:41 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:22:27 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:22:27 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:22:27 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:22:27 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:23:46 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:23:46 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:23:46 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:23:46 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:25:21 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:25:21 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:25:21 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:25:21 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:29:38 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:29:38 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:29:38 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:29:38 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:32:59 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:32:59 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:32:59 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:32:59 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:34:09 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:34:09 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:34:09 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:34:09 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:35:02 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:35:02 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:35:02 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:35:02 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:38:50 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:38:50 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:38:50 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:38:50 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:39:43 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:39:43 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:39:43 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:39:43 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:40:15 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:40:15 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:40:15 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:40:15 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:41:02 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:41:02 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:41:02 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:41:02 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:42:22 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:42:22 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:42:22 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:42:22 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:45:06 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:45:06 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:45:06 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:45:06 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:45:55 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:45:55 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:45:55 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:45:55 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:46:00 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:46:00 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:46:00 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:46:00 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:46:37 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:46:37 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:46:37 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:46:37 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:51:38 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:51:38 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:51:38 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:51:38 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:52:43 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:52:43 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:52:43 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:52:43 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:53:19 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:53:19 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:53:19 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:53:19 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:54:19 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:54:19 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:54:19 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:54:19 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:55:20 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:55:20 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:55:20 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:55:20 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:55:23 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:55:23 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:55:23 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:55:23 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 20:56:04 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 20:56:04 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:56:04 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 20:56:04 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 21:02:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[30-Aug-2024 21:02:14 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 21:02:14 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[30-Aug-2024 21:02:14 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 21:02:14 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[30-Aug-2024 21:02:14 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[30-Aug-2024 21:02:14 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[30-Aug-2024 21:02:16 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 11
+[30-Aug-2024 21:02:16 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 21:02:16 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 44
+[30-Aug-2024 21:02:16 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 21:02:16 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/choose-recipe.php on line 49
+[30-Aug-2024 21:02:18 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 11
+[30-Aug-2024 21:02:18 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 12
+[30-Aug-2024 21:02:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/update-recipe.php on line 12
+[30-Aug-2024 21:02:23 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 21:02:23 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 21:02:23 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 21:02:23 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[30-Aug-2024 21:10:07 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 19
+[30-Aug-2024 21:10:07 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 21:10:07 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 52
+[30-Aug-2024 21:10:07 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'hiltonf4_cc.recipeitems' doesn't exist in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php:128
+Stack trace:
+#0 /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php(128): mysqli->query('SELECT * FROM r...')
+#1 {main}
+  thrown in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/view-recipe.php on line 128
+[31-Aug-2024 06:49:44 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[31-Aug-2024 06:49:46 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 7
+[31-Aug-2024 06:49:47 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 12
+[31-Aug-2024 06:49:47 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[31-Aug-2024 06:49:47 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 19
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 54
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 54
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 55
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 55
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 84
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 85
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 86
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 87
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 88
+[31-Aug-2024 06:50:18 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 89
+[31-Aug-2024 06:50:41 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[31-Aug-2024 06:50:41 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[31-Aug-2024 06:50:41 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[31-Aug-2024 06:50:41 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[31-Aug-2024 06:50:41 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[31-Aug-2024 06:50:41 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[31-Aug-2024 06:50:41 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[31-Aug-2024 12:08:54 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 7
+[31-Aug-2024 12:08:55 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 12
+[31-Aug-2024 12:08:55 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[31-Aug-2024 12:08:55 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[31-Aug-2024 12:09:16 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[31-Aug-2024 12:09:20 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[31-Aug-2024 12:09:36 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 5
+[31-Aug-2024 12:09:36 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php:1) in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/Login.php on line 38
+[01-Sep-2024 11:40:29 America/Boise] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/index.php on line 18
+[01-Sep-2024 11:40:31 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/demo-login.php on line 7
+[01-Sep-2024 11:40:31 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 12
+[01-Sep-2024 11:40:31 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[01-Sep-2024 11:40:31 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/make-flower.php on line 47
+[01-Sep-2024 11:40:43 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 13
+[01-Sep-2024 11:40:43 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[01-Sep-2024 11:40:43 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 15
+[01-Sep-2024 11:40:43 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[01-Sep-2024 11:40:43 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 16
+[01-Sep-2024 11:40:43 America/Boise] PHP Warning:  Undefined array key "totalThc" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 24
+[01-Sep-2024 11:40:43 America/Boise] PHP Warning:  Undefined array key "totalPerTsp" in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/insert-flower.php on line 25
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 19
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 54
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 54
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  Undefined global variable $_SESSION in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 55
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 55
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 84
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 85
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 86
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 87
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 88
+[01-Sep-2024 11:40:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home1/hiltonf4/public_html/dbq/Druids_Forge/cctest/pick-flower.php on line 89

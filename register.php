@@ -1,28 +1,37 @@
 <!doctype html>
 <html>
 <head>
-<?php if (isset($_POST['register'])) { 
-
-// Connect to the database 
-$mysqli = new mysqli("localhost", "root", "root", "cc"); 
-
-// Check for errors 
-if ($mysqli->connect_error) { die("Connection failed: " . $mysqli->connect_error); } 
-
-// Prepare and bind the SQL statement 
-$stmt = $mysqli->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)"); $stmt->bind_param("sss", $username, $email, $password); 
+<link rel="stylesheet" href="css/style.css" />
+<?php 
+include('conn.php');
+$mysqli = new mysqli($hostname, $username, $password, $database);
+// Check connection
+if ($mysqli->connect_error) {
+  die("Connection failed: " . $mysqli->connect_error);
+}else{
+echo ("good connection!");
+}
+echo $database;
 
 // Get the form data 
-$username = $_POST['username']; $email = $_POST['email']; $password = $_POST['password']; 
-
+$username = $_POST['username']; 
+$email = $_POST['email']; 
+$password = $_POST['password']; 
+echo $username;
+echo $email;
+echo $password;
 // Hash the password 
 $password = password_hash($password, PASSWORD_DEFAULT); 
+//Insert 
+$query = "INSERT INTO users (username, email, users.password) VALUES ('$username', '$email', '$password')";
+//echo $query;
+if (mysqli_query($mysqli, $query)) {
+  echo "New record created successfully. ";
+} else {
+  echo "Error: " . $query . "<br>" . mysqli_error($mysqli);
+}
 
-// Execute the SQL statement 
-if ($stmt->execute()) { echo "New account created successfully!"; } else { echo "Error: " . $stmt->error; } 
 
-// Close the connection 
-$stmt->close(); $mysqli->close(); }
 ?>
 <meta charset="UTF-8">
 <title>Register</title>
@@ -39,5 +48,8 @@ $stmt->close(); $mysqli->close(); }
   <input id="password" name="password" required="" type="password" />
   <input name="register" type="submit" value="Register" />
 </form>
+<form method="POST" action="Login.php">
+<input type="submit" id="submit" value="Login" name="submit">
+</form><br>
 </body>
 </html>

@@ -1,13 +1,16 @@
 <!doctype html>
 <html>
-<head>
-<?php session_start(); 
- // move connections to a single file require 'conn.php';
-$username = "root";
-$password = "root";
-$database = "ccdemo";
 
-$mysqli = new mysqli("localhost:3306", $username, $password, $database);
+<head>
+<link rel="stylesheet" href="css/style.css" />
+
+<?php 
+include('redirect.php');
+include('conndemo.php');
+
+$mysqli = new mysqli($hostname, $username, $password, $database);
+//die("dead1");
+echo $database;
 
 // Check connection
 if ($mysqli->connect_error) {
@@ -26,11 +29,14 @@ echo "New record created successfully";
 } else {
 echo "Error: " . $query . "<br>" . $mysqli->error;
 } 
-$_SESSION['demouser'] = $user;
+session_start(); 
 $_SESSION['id'] = $last_id;
-header ('location: make-flower.php'); 
-exit;
+
+
+
+RedirectWithMethodPost("make-flower.php?user=demouser");
 ?>
+
 <body>
 </body>
 </html>

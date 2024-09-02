@@ -4,27 +4,19 @@
 <meta charset="UTF-8">
 <title>insert local new</title>
 <link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body style="background-color:greenyellow;">
 <?php
-session_start();
-if (isset($_SESSION['demouser'])) {
- ?>
- <div class="navbar">
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-    <a href="index.php">Home</a>
 
-    </div>
-  </div>
-</div>
- <?php
- }else{
-  ?>
+session_start();
+$userid = $_SESSION['id'];
+$demouser = $_POST['user'];
+//echo $userid;
+//echo $demouser;
+if (empty($demouser)) {
+ ?>
 
 <div class="navbar">
   <div class="dropdown">
@@ -40,13 +32,24 @@ if (isset($_SESSION['demouser'])) {
     </div>
   </div>
 </div>
+<?php }else{ ?>
+ <div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+    <a href="index.php">Home</a>
+
+    </div>
+  </div>
+</div>
+
+
 <?php
  }
- session_start();
-		$username = $_POST["username"];
-		$password = $_POST["password"];
-		$userid = $_SESSION['id'];
-		//echo $userid;
+
+
 
 ?>
 
@@ -89,7 +92,7 @@ if (isset($_SESSION['demouser'])) {
   <input type="text" id="amountflower" name="amountflower"><br>
   	<label for="fatamount">Amount of fat in cups:</label><br>
   <input type="text" id="fatamount" name="fatamount"><br><br>
-  
+  <input type="hidden" id= "demouser" name="demouser" value = "<?php echo $demouser; ?>"> <br><br>
   <input type="submit" value="Submit">
 </form>
 </body>

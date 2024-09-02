@@ -1,22 +1,20 @@
-<!doctype html>
-<html>
-<head>
-<?php session_start();
+
+<?php
+session_start();
  $userid = $_SESSION['id'];
  $demouser = $_SESSION['demouser']; 
  // move connections to a single file require 'conn.php';
-$username = "root";
-$password = "root";
-$database = "ccdemo";
 
-$mysqli = new mysqli("localhost:3306", $username, $password, $database);
-
-// Check connection
-if ($mysqli->connect_error) {
-  die("Connection failed: " . $mysqli->connect_error);
-}else{
-echo ("good connection!");
-}
+ include('conndemo.php');
+ $mysqli = new mysqli($hostname, $username, $password, $database);
+ echo $database;
+ // Check connection
+ if ($mysqli->connect_error) {
+   die("Connection failed: " . $mysqli->connect_error);
+ }else{
+ echo ("good connection!");
+ }
+ $user = "demo user";
 
 
 $query = "DELETE  `users`, `flower`,`userflower` FROM `userflower`JOIN `users`ON users.id = userflower.userid JOIN `flower` ON userflower.flowerid = flower.id WHERE users.id = '$userid' ";
@@ -30,14 +28,14 @@ echo "Error: " . $query . "<br>" . $mysqli->error;
 } 
 
   
-         session_unset();
-         session_destroy();
-         //session_write_close();
+
+  
+    session_unset();
+    session_destroy();
+
+
 
      
 header ('location: index.php'); 
 exit;
 ?>
-<body>
-</body>
-</html>

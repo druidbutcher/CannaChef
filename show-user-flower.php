@@ -7,19 +7,56 @@
 
 <body>
 <?php
+if (empty($demouser)) {
+  ?>
+ 
+ <div class="navbar">
+   <div class="dropdown">
+     <button class="dropbtn">Dropdown
+       <i class="fa fa-caret-down"></i>
+     </button>
+     <div class="dropdown-content">
+     <a href="index.php">Home</a>
+       <a href="make-flower.php">Make flower product</a>
+       <a href="pick-flower.php">Connect Flower w/ recipe 2</a>
+       <a href="pick-recipe-2view.php">View Recipe</a>
+       <a href="recipe-maker.php">Make Recipe</a>
+     </div>
+   </div>
+ </div>
+ <?php }else { ?>
+  <div class="navbar">
+   <div class="dropdown">
+     <button class="dropbtn">Dropdown
+       <i class="fa fa-caret-down"></i>
+     </button>
+     <div class="dropdown-content">
+     <a href="index.php">Home</a>
+ 
+     </div>
+   </div>
+ </div>
+<?php
+}
+
 session_start();
  $userid = $_SESSION['id'];
- 
-//$userid= "5";
- //echo ("im here");
- $username = "root";
- $password = "root";
- $database = "cc";
 
-$mysqli = new mysqli("localhost:3306", $username, $password, $database);
-if ($mysqli->connect_error) {
-  die("Connection failed: " . $mysqli->connect_error);
-}
+$userid = $_SESSION['id'];
+$flowerid= $_SESSION['fid'];
+
+if (isset($_SESSION['demouser'])) {
+ include('conndemo.php');
+ }else{
+   include('conn.php');
+ }
+ $mysqli = new mysqli($hostname, $username, $password, $database);
+ // Check connection
+ if ($mysqli->connect_error) {
+   die("Connection failed: " . $mysqli->connect_error);
+ }else{
+ //echo ("good connection!");
+ }
 $query = "SELECT * FROM flower INNER JOIN userflower ON flower.id = userflower.flowerid ORDER BY '$userid'";
 
 //echo $query;

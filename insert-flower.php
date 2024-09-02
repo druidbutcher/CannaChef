@@ -9,11 +9,11 @@
 ?>
 <body>
 <?php 
-
+include('redirect.php');
 session_start();
 
         $userid = $_SESSION['id'];
-        $demouser = $_SESSION['demouser'];
+        $demouser = $_POST['demouser'];
         $flowerName = $_POST["flowername"];
         $thcPercent = $_POST["thcpercent"];
         $flowerAmount = $_POST["amountflower"];
@@ -23,7 +23,8 @@ session_start();
         $decarb = $_POST["decarb"];
         $totalThc = $_POST["totalThc"];
         $totalPerThc = $_POST["totalPerTsp"];
-		
+           // echo $userid;
+            //echo $demouser;
 		//do the math for totalthc
 		$totalmg = $thcPercent * '10';
 		 
@@ -31,7 +32,7 @@ session_start();
 		 $totalThc = $totalThcmg / $fatAmount;
 		 $totalPerTsp = $totalThc / '16';
 		
-		
+	
 		
 	/*
 		 
@@ -53,29 +54,28 @@ session_start();
         
 		return String(format: "%.2f", convertToGram)
 */
-//$demouser = $_SESSION['demouser'];
-$username = "root";
-$password = "root";
-if (isset($_SESSION['demouser'])) {
-$database = "ccdemo";
+
+
+if (empty($demouser)) {
+  include('conn.php');
 }else{
-  $database = "cc";
+  include('conndemo.php');
 }
 
 
-$mysqli = new mysqli("localhost:3306", $username, $password, $database);
-//die("Im here");
-
-
+$mysqli = new mysqli($hostname, $username, $password, $database);
 // Check connection
+//echo $database;
+//die ("im dead again");
 if ($mysqli->connect_error) {
   die("Connection failed: " . $mysqli->connect_error);
+}else{
+//echo ("good connection!");
 }
-//echo "Connected successfully";
-
+//echo $database;
 
 $query = "INSERT INTO flower (fat, decarb, infusion, flowerName, thcPercent, flowerAmount, fatAmount, totalThc, totalPerTsp) VALUES ('$fat', '$decarb', '$infusion', '$flowerName', '$thcPercent','$flowerAmount','$fatAmount','$totalThc','$totalPerTsp')";
-
+//echo $query;
 if (mysqli_query($mysqli, $query)) {
   $last_id = mysqli_insert_id($mysqli);
   echo "New record created successfully. Last inserted ID is: " . $last_id;
@@ -87,13 +87,15 @@ if (mysqli_query($mysqli, $query)) {
 $query = "INSERT INTO userflower (flowerid, userid) VALUES ('$last_id','$userid')";
 $result = $mysqli->query($query); 
 $_SESSION['fid'] = $last_id;
-//echo $query;
+//echo $demouser;
+//echo $_SESSION['fid'];
+//die("why i gotta die");
+if (empty($demouser)) {
+  RedirectWithMethodPost("pick-flower.php?user=''");
+}else{
+  RedirectWithMethodPost("pick-flower.php?user=demouser");
+}
 
-
-
-//$mysqli->close();
-header("Location: pick-flower.php");
-exit();
 ?>
 
 </body>

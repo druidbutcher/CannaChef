@@ -119,12 +119,14 @@ $result1 = $mysqli->query($query2);
   </select>
   <label for="measure">Choose a measurement:</label>
   <select id="measure" name="measure">
-    <option value="cup">Cup</option>
+  <option value="cup">Cup</option>
     <option value="tsp">Teaspoon</option>
     <option value="tbsp">Tablespoon</option>
     <option value="pinch">Pinch</option>
-    <option value="large">large</option>
-    <option value="ounces">ounces</option>
+    <option value="ounces">Ounces</option>
+    <option value="floz">Fluid Ounces</option>
+    <option value="large">Large</option>
+    <option value="package">Package</option>
   </select><br>
   <label for="Description">Description :</label><br>
   <input type="text" id="description" name="description"><br>

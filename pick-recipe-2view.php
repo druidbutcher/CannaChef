@@ -7,34 +7,57 @@
 </head>
 
 <body>
-<div class="navbar">
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-    <a href="index.php">Home</a>
-      <a href="make-flower.php">Make flower product</a>
-      <a href="pick-flower.php">Connect Flower w/ recipe 2</a>
-      <a href="pick-recipe-2view.php">View Recipe</a>
-      <a href="recipe-maker.php">Make Recipe</a>
-    </div>
-  </div>
-</div>
-<?php
+  <?php
 session_start();
- $userid = $_SESSION['id'];
+if (empty($demouser)) {
+  ?>
  
-//$userid= "5";
- //echo ("im here");
- $username = "root";
- $password = "root";
- $database = "cc";
-
-$mysqli = new mysqli("localhost:3306", $username, $password, $database);
-if ($mysqli->connect_error) {
-  die("Connection failed: " . $mysqli->connect_error);
+ <div class="navbar">
+   <div class="dropdown">
+     <button class="dropbtn">Dropdown
+       <i class="fa fa-caret-down"></i>
+     </button>
+     <div class="dropdown-content">
+     <a href="index.php">Home</a>
+       <a href="make-flower.php">Make flower product</a>
+       <a href="pick-flower.php">Connect Flower w/ recipe 2</a>
+       <a href="pick-recipe-2view.php">View Recipe</a>
+       <a href="recipe-maker.php">Make Recipe</a>
+     </div>
+   </div>
+ </div>
+ <?php }else { ?>
+  <div class="navbar">
+   <div class="dropdown">
+     <button class="dropbtn">Dropdown
+       <i class="fa fa-caret-down"></i>
+     </button>
+     <div class="dropdown-content">
+     <a href="index.php">Home</a>
+ 
+     </div>
+   </div>
+ </div>
+<?php
 }
+
+ $userid = $_SESSION['id'];
+ $userid = $_SESSION['id'];
+ $flowerid= $_SESSION['fid'];
+
+if (isset($_SESSION['demouser'])) {
+ //$database = "ccdemo";
+ include('conndemo.php');
+ }else{
+   include('conn.php');
+ }
+ $mysqli = new mysqli($hostname, $username, $password, $database);
+ // Check connection
+ if ($mysqli->connect_error) {
+   die("Connection failed: " . $mysqli->connect_error);
+ }else{
+ //echo ("good connection!");
+ }
 //$query = "SELECT * FROM `userflower` INNER JOIN `recipe` ON userflower.recipeid = recipe.id INNER JOIN `flower` ON userflower.flowerid = flower.id WHERE userflower.recipeid != 0 ORDER BY recipe.id ";
 $query = "SELECT userflower.id , userflower.numberservings, userflower.thcPerServing, userflower.thcFatAmount,flower.flowerName, flower.thcPercent, recipe.name, flower.totalThc, recipe.id as recid  FROM `userflower` INNER JOIN `recipe` ON userflower.recipeid = recipe.id INNER JOIN `flower` ON userflower.flowerid = flower.id WHERE userflower.recipeid != 0 ORDER BY recipe.id";
 $result = $mysqli->query($query);

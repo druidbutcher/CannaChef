@@ -69,7 +69,7 @@ $row = $result->fetch_assoc();
   <input type="text" id="ingredient" name="ingredient"><br>
   <label for="amount">Amount:</label>
   <select id="amount" name="amount"><br>
-    <option value=".25">1/4</option>
+  <option value=".25">1/4</option>
     <option value=".5">1/2</option>
     <option value=".75">3/4 </option>  
     <option value="1">1</option>
@@ -88,6 +88,9 @@ $row = $result->fetch_assoc();
     <option value="4.25">4 1/4</option>
     <option value="4.5">4 1/2</option>
     <option value="4.75">4 3/4 </option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
 
   </select>
   <label for="measure">Choose a measurement:</label>
@@ -96,7 +99,10 @@ $row = $result->fetch_assoc();
     <option value="tsp">Teaspoon</option>
     <option value="tbsp">Tablespoon</option>
     <option value="pinch">Pinch</option>
+    <option value="ounces">Ounces</option>
+    <option value="floz">Fluid Ounces</option>
     <option value="large">Large</option>
+    <option value="package">Package</option>
   </select><br>
   <label for="Description">Description :</label><br>
   <input type="text" id="description" name="description"><br>

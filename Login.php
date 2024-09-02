@@ -1,10 +1,15 @@
 <!doctype html>
 <html>
 <head>
-<?php session_start(); if (isset($_POST['login'])) { 
+  <link rel="stylesheet" href="css/style.css" />
+<?php 
+ session_start(); 
+
+ include('conn.php');
+ if (isset($_POST['login'])) { 
 
 // Connect to the database 
-$mysqli = new mysqli("localhost", "root", "root", "cc"); 
+$mysqli = new mysqli($hostname, $username, $password, $database);
 
 // Check for errors 
 if ($mysqli->connect_error) { die("Connection failed: " . $mysqli->connect_error); } 
@@ -32,7 +37,7 @@ if (password_verify($password, $hashed_password)) {
 
 // Set the session variables 
 $_SESSION['loggedin'] = true; $_SESSION['id'] = $id; $_SESSION['username'] = $username; 
-
+echo $id;
 // Redirect to the user's dashboard 
 header("Location: make-flower.php"); exit; } else { echo "Incorrect password!"; } } else { echo "User not found!"; } 
 
