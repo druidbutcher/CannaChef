@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="css/style.css" />
 <?php 
  session_start(); 
-
+ include('redirect.php');
  include('conn.php');
  if (isset($_POST['login'])) { 
 
@@ -38,8 +38,15 @@ if (password_verify($password, $hashed_password)) {
 // Set the session variables 
 $_SESSION['loggedin'] = true; $_SESSION['id'] = $id; $_SESSION['username'] = $username; 
 echo $id;
-// Redirect to the user's dashboard 
-header("Location: make-flower.php"); exit; } else { echo "Incorrect password!"; } } else { echo "User not found!"; } 
+// Redirect to the user's dashboard
+RedirectWithMethodPost("make-flower.php"); 
+//header("Location: make-flower.php"); 
+exit; 
+} else {
+   echo "Incorrect password!";
+   } 
+  } else { 
+    echo "User not found!"; } 
 
 // Close the connection 
 $stmt->close(); $mysqli->close(); }

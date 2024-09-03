@@ -78,7 +78,7 @@ if (empty($demouser)) {
   }
   $mysqli = new mysqli($hostname, $username, $password, $database);
   // Check connection
-  //echo $database;
+  echo $database;
 
   if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
@@ -134,11 +134,12 @@ echo '
 <br>
 '; 
 
-$query2 = "SELECT * FROM recipeitems  WHERE recipeid ='$recipeid'";
-//echo $query2;
-$result3 = $mysqli->query($query2);
-While($row = mysqli_fetch_array($result3))
-{ 
+$query = "SELECT * FROM recipeItems  WHERE recipeid ='$recipeid'";
+//echo $query;
+$result = $mysqli->query($query);
+While($row=mysqli_fetch_array($result))
+ { 
+
 
 $roundup =  $row["amount"] * 8;
 $midround = ceil($roundup);

@@ -137,7 +137,7 @@ echo '
 <br>
 '; 
 
-$query2 = "SELECT * FROM recipeitems  WHERE recipeid ='$recipeid'";
+$query2 = "SELECT * FROM recipeItems  WHERE recipeid ='$recipeid'";
 
 $result2 = $mysqli->query($query2);
 While($row=mysqli_fetch_array($result2))

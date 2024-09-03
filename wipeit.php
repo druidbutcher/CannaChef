@@ -6,6 +6,7 @@ session_start();
  // move connections to a single file require 'conn.php';
 
  include('conndemo.php');
+ include('redirect.php');
  $mysqli = new mysqli($hostname, $username, $password, $database);
  echo $database;
  // Check connection
@@ -36,6 +37,5 @@ echo "Error: " . $query . "<br>" . $mysqli->error;
 
 
      
-header ('location: index.php'); 
-exit;
+    RedirectWithMethodPost("index.php");
 ?>
