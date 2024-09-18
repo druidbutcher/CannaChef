@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Show Recipes with Flower</title>
+<title>Show Recipes</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -40,10 +40,9 @@ if (empty($demouser)) {
  </div>
 <?php
 }
+session_start();
 
  $userid = $_SESSION['id'];
- $userid = $_SESSION['id'];
- $flowerid= $_SESSION['fid'];
 
 if (isset($_SESSION['demouser'])) {
  //$database = "ccdemo";
@@ -58,31 +57,29 @@ if (isset($_SESSION['demouser'])) {
  }else{
  //echo ("good connection!");
  }
-//$query = "SELECT * FROM `userflower` INNER JOIN `recipe` ON userflower.recipeid = recipe.id INNER JOIN `flower` ON userflower.flowerid = flower.id WHERE userflower.recipeid != 0 ORDER BY recipe.id ";
-$query = "SELECT userflower.id , userflower.numberservings, userflower.thcPerServing, userflower.thcFatAmount,flower.flowerName, flower.thcPercent, recipe.name, flower.totalThc, recipe.id as recid  FROM `userflower` INNER JOIN `recipe` ON userflower.recipeid = recipe.id INNER JOIN `flower` ON userflower.flowerid = flower.id WHERE userflower.recipeid != 0 ORDER BY recipe.id";
-//$query = "SELECT * FROM recipe ";
-
+$query = "SELECT * FROM recipe ";
 $result = $mysqli->query($query);
-$row=mysqli_fetch_array($result);
-//echo $row["userflower.id"];
+//$row=mysqli_fetch_array($result);
+//echo $row["id"];
 	
 ?>
-<h3>Choose a Recipe you have made</h3>
-		<form action="show-recipe.php" method="POST">
+<h3>Choose a Recipe you want to made</h3>
+		<form action="pick-recipe-second.php" method="POST">
 		
 <?php
 
-echo $numberServings;
-echo '<select name= "userflowerid" id= "userflowerid">';
+echo '<select name= "recipeid" id= "recipeid">';
 //echo "<option>--Users--</option";	
 While($row=mysqli_fetch_array($result))
-
 { 
+   
   $recid = "$row[id]";
-?>
-
-	<option value = <?php echo $recid; ?>> <?php echo "$row[name]"?>--Flower--<?php echo "$row[flowerName]" ; ?> </option>"
+	?>
+  echo "<option value=<?php echo $recid; ?>> <?php echo "$row[name]" ; ?></option>
+  
   <?php
+
+    
 }
 	?>
 

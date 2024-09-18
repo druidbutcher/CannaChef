@@ -2,23 +2,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Make infusion</title>
-<link rel="stylesheet" href=".//css/style.css" />
+<title>insert local new</title>
+<link rel="stylesheet" href="css/style.css" />
 
 </head>
 
+<body>
 <?php
 
 session_start();
-$userid = $_SESSION["id"];
-$demouser = $_POST["user"];
-
+$userid = $_SESSION['id'];
+$demouser = $_POST['user'];
+//echo $userid;
+//echo $demouser;
 if (empty($demouser)) {
  ?>
 
 <div class="navbar">
   <div class="dropdown">
-    <button class="dropbtn">Menu
+    <button class="dropbtn">Dropdown
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
@@ -33,7 +35,7 @@ if (empty($demouser)) {
 <?php }else{ ?>
  <div class="navbar">
   <div class="dropdown">
-    <button class="dropbtn">Demo Menu
+    <button class="dropbtn">Dropdown
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
@@ -46,32 +48,10 @@ if (empty($demouser)) {
 
 <?php
  }
-
- if (empty($demouser)) {
-  include('conn.php');
-}else{
-  include('conndemo.php');
-}
-
-
-$mysqli = new mysqli($hostname, $username, $password, $database);
-
-if ($mysqli->connect_error) {
-  die("Connection failed: " . $mysqli->connect_error);
-}else{
-
-}
-$query = "SELECT recipe.id , recipeItems.ingredient FROM recipe INNER JOIN recipeItems on recipeItems.recipeid = recipe.id WHERE recipe.id = '$recipeid' AND recipeItems.isFat = '1' ";
-$result = $mysqli->query($query);
-$row = $result->fetch_assoc();
-$fatty = $row['ingredient'];
-
 ?>
-<h1>Lets make a THC Infusion</h1>
+
 <form action="insert-flower.php" method="POST">
-<label for="flowername">Name your infusion:</label><br>
-  <input type="text" id="flowername" name="flowername"><br>
-<h3> Choose the base ingredient you want to use.</h3>
+ <h3> Type of Fat</h3>
  <div class="container">
   <div id="radios">
     <label for="butter" >
@@ -88,15 +68,8 @@ $fatty = $row['ingredient'];
     </label>
   </div>
 </div>
-<br>
-<label for="fatamount">Enter the amount you want to make , in cups:</label><br>
-  <input type="text" id="fatamount" name="fatamount"><br>
-<h2> Lets talk about your flower</h2>
-  <label for="thcpercent">What is the % of THC in your flower?</label><br>
-  <input type="text" id="thcpercent" name="thcpercent"><br>
-    <label for="amountflower">Enter the amount of flower you are using, in Grams</label><br>
-  <input type="text" id="amountflower" name="amountflower"><br>
-<h3>How will you decarboxylate?</h3>
+
+<h3>Type of Decarb</h3>
 <div class="container">
   <div id="radios">
     <label for="oven" >
@@ -110,7 +83,7 @@ $fatty = $row['ingredient'];
   </div>
 </div>
 
-<h3>What will you use to infuse your product?</h3>
+<h3>Type of Infusion</h3>
 <div class="container">
   <div id="radios">
     <label for="mbm" >
@@ -132,14 +105,50 @@ $fatty = $row['ingredient'];
   </div>
 </div>
 <br>
+
+  <!--
+ Original radio buttons
+
+  <label for="oil">Oil
+  <input type="radio" id="oil" name="fat" value="oil">
+  <img src="images/cannaleaf.png" alt="oil"width="20" height="20">
+  </label>
+  <label for="butter">Butter
+  <input type="radio" id="butter" name="fat" value="butter">
+  <img src="images/cannaleaf.png" alt="butter"width="20" height="20">
+  </label>
+   <label for="tincture">Tincture
+  <input type="radio" id="tincture" name="fat" value="tincture">
+  <img src="images/cannaleaf.png" alt="butter"width="20" height="20">
+  </label><br>
   
+  <h3>Type of Decarb</h3>
+    <label for="oven">Oven</label>
+  <input type="radio" id="oven" name="decarb" value="oven">
+  <label for="aedent">Ardent</label>
+  <input type="radio" id="ardent" name="decarb" value="ardent"><br>
 
-
-  <input type="hidden" id="fatty" name="fatty" value=<?php echo $fatty ?>>
-  <input type="hidden" id="granny" name="granny" value=<?php echo $granny ?>>
-  <input type="hidden" id="recipeid" name="recipeid" value=<?php echo $recipeid ?>>
+  <h3>Type of Infusion</h3>
+  <label for="mbm">Magic Butter Machine</label>
+    <input type="radio" id="mbm" name="infusion" value="mbm">
+  <label for="slowcooker">Slow Cooker</label>
+  <input type="radio" id="slowcooker" name="infusion" value="slowcooker">
+   <label for="ardentfx">Ardent FX</label>
+  <input type="radio" id="ardentfx" name="infusion" value="ardentfx">
+     <label for="freezer">Freezer</label>
+  <input type="radio" id="freezer" name="infusion" value="freezer"><br><br><br> 
+-->
+  
+  <label for="flowername">Flower name:</label><br>
+  <input type="text" id="flowername" name="flowername"><br>
+  	<label for="thcpercent">Percentage of THC:</label><br>
+  <input type="text" id="thcpercent" name="thcpercent"><br>
+    <label for="amountflower">Amount of Flower in Grams:</label><br>
+  <input type="text" id="amountflower" name="amountflower"><br>
+  	<label for="fatamount">Amount of fat in cups:</label><br>
+  <input type="text" id="fatamount" name="fatamount"><br><br>
   <input type="hidden" id= "demouser" name="demouser" value = "<?php echo $demouser; ?>"> <br><br>
-  <input type="submit" value="NEXT->">
+  <input type="submit" value="Submit">
 </form>
 </body>
 </html>

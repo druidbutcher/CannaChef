@@ -1,27 +1,33 @@
 
-/*Style for the background */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20pt;
-    /* background-image: linear-gradient(rgba(9, 125, 59, 0.5), rgba(153, 230, 187, 0.5)),
-                  url("../images/ccicon1024.png"); */
-    background-image: url("../images/tiletest.png");
-    background-repeat: repeat;
+
+/*/style for tables ßdoesnt work here*/
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
     text-align: center;
+  }
+/*Style for the background */
+body { 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  /* background-image: linear-gradient(rgba(9, 125, 59, 0.5), rgba(153, 230, 187, 0.5)),
+                  url("../images/ccicon1024.png"); */
+ background-image: url("../images/tiletest.png");
+ background-repeat: repeat;
                 } 
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: #005D3C;
+    background-color: #333;
     font-family: Arial;
-	width: auto;
   }
   
   /* Links inside the navbar */
   .navbar a {
     float: left;
-    font-size: 20px;
-    color: rgb(27, 25, 25);
+    font-size: 16px;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -35,10 +41,10 @@ body {
   
   /* Dropdown button */
   .dropdown .dropbtn {
-    font-size: 20px;
+    font-size: 16px;
     border: none;
     outline: none;
-    color: rgb(2, 33, 15);
+    color: white;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
@@ -56,14 +62,14 @@ body {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(112, 152, 124, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
     float: none;
-    color: rgb(21, 20, 20);
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -72,7 +78,7 @@ body {
   
   /* Add a grey background color to dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #b2e4bd;
+    background-color: #ddd;
   }
   
   /* Show the dropdown menu on hover */
@@ -101,7 +107,6 @@ input[type="radio"] {
 input[type="radio"] + span {
   /* font-family: 'Material Icons'; */
   color: #000000;
-	font-size:14pt;
   border-radius: 20%;
   padding: 12px;
   -webkit-transition: all 0.1s;
@@ -116,39 +121,12 @@ input[type="radio"]:checked + span {
 input[type="radio"]:focus + span {
   color: #fff;
 }
-
-
-.tutorials{
-	width:100%;
-    text-align: center;
-    background-color: #005D3C;
-    color: #FFFFFF;
-    padding: 10px;
-    border-radius: 5px;
-	border-style: solid;
-		border-width: thin;
-border-color: white;
-    font-size: 12pt;
-}
-
-.loginbuttons {
-    width: 100%;
-    border-style: solid;
-	border-color: green;
-	border-width: thick;
-    text-align: center;
-    font-size: 12pt;
-    border-radius: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: white;
-    color: black;
-}
+/* for submit buttons*/
 input[type=submit] {
-  background-color:  #71b894;
-  border: 1;
+  background-color: #04AA6D;
+  border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 16px 52px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
@@ -163,17 +141,17 @@ input[type=submit] {
 }
 
 .custom-dropdown select {
-  background-color: #1b9a41;
+  background-color: #1abc9c;
   color: #fff;
   font-size: inherit;
   padding: .5em;
   padding-right: 2.5em; 
-  border: 1 black;
+  border: 0;
   margin: 0;
   border-radius: 3px;
   text-indent: 0.01px;
   text-overflow: '';
- 
+  -webkit-appearance: button; /* hide default arrow in chrome OSX */
 }
 
 .custom-dropdown::before,
@@ -215,36 +193,4 @@ input[type=submit] {
 
 .custom-dropdown::after {
   color: rgba(0,0,0,.4);
-}
-/*/style for tables */
-
-/* spacing */
-
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: 3px solid black;
-}
-
-thead th:nth-child(1) {
-  width: 30%;
-}
-
-thead th:nth-child(2) {
-  width: 20%;
-}
-
-thead th:nth-child(3) {
-  width: 15%;
-}
-
-thead th:nth-child(4) {
-  width: 35%;
-}
-
-th,
-td {
-  border: 1px solid black;
-  padding: 20px;
 }

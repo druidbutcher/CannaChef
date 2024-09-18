@@ -1,7 +1,23 @@
 <!doctype html>
 <html>
 <head>
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href=".//css/style.css" />
+
+  <style>
+    input[type=submit] {
+  background-color:  #71b894;
+  border: 1;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
 <?php 
  session_start(); 
  include('redirect.php');
@@ -36,8 +52,10 @@ $stmt->fetch();
 if (password_verify($password, $hashed_password)) { 
 
 // Set the session variables 
-$_SESSION['loggedin'] = true; $_SESSION['id'] = $id; $_SESSION['username'] = $username; 
-echo $id;
+$_SESSION['loggedin'] = true; 
+$_SESSION['id'] = $id; 
+$_SESSION['username'] = $username; 
+
 // Redirect to the user's dashboard
 RedirectWithMethodPost("make-flower.php"); 
 //header("Location: make-flower.php"); 
