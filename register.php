@@ -4,14 +4,16 @@
 <link rel="stylesheet" href="css/style.css" />
 
 <?php 
+include('redirect.php');
 
+if (isset($_POST['register'])) { 
 include('conn.php');
 $mysqli = new mysqli($hostname, $username, $password, $database);
 // Check connection
 if ($mysqli->connect_error) {
   die("Connection failed: " . $mysqli->connect_error);
 }else{
-//echo ("good connection!");
+echo ("good connection!");
 }
 //echo $database;
 
@@ -25,6 +27,7 @@ $password = $_POST['password'];
 // Hash the password 
 $password = password_hash($password, PASSWORD_DEFAULT); 
 //Insert 
+
 $query = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
 //echo $query;
 if (mysqli_query($mysqli, $query)) {
@@ -32,7 +35,9 @@ if (mysqli_query($mysqli, $query)) {
 } else {
   echo "Error: " . $query . "<br>" . mysqli_error($mysqli);
 }
-
+//goto login
+RedirectWithMethodPost("Login.php?user=''");
+}
 
 ?>
 <meta charset="UTF-8">

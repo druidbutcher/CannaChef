@@ -134,7 +134,7 @@ $query = "SELECT * FROM recipeItems  WHERE recipeid ='$recipeid'";
 //echo $query;
 $result = $mysqli->query($query);
 While($row=mysqli_fetch_array($result))
- { 
+  {
 
 
 $roundup =  $row["amount"] * 8;
@@ -165,8 +165,9 @@ if ($fatty != 1){
  $tottbsp = $totalThcRec * 16;
 
 
-    if ($oldfat > 0){
-      if ($oldfat < $totalThcRec){
+    
+      if ($oldfat <= $totalThcRec){
+        //die("Ima dead duck");
     ?>
     <h2 style="color: red"> You cant make this recipe with this infusion </h2>
     
@@ -193,13 +194,6 @@ if ($fatty != 1){
    
     <?php
     //echo ("This now gives you your   ").convert_decimal_to_fraction( $finalround).("  ").$row["measure"].("  of *Cannabis infused ").$row["ingredient"].("*  containing the correct mix of THC   ")."</h1>";
-  }else{
-  ?>
-  <h1 style="font-size: 1rem; color: #ec3a13">
-  <?php
-  echo ("This is how much to use!!")."</h1>";
-  echo $row["ingredient"].("  containing THC :  ").convert_decimal_to_fraction( $totalThcRec).(" cups  or  ").convert_decimal_to_fraction( $tottbsp).("  Tbsp ");
-
   }
     ?>
     
@@ -207,7 +201,7 @@ if ($fatty != 1){
     <?php
 
   }
-}
+
 ?>
 <h2> Directions</h2>
 <?php

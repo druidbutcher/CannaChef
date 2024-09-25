@@ -39,8 +39,7 @@ $demouser = $_POST['user'];
 $userid = $_SESSION['id'];
 $flowerid = $_SESSION['fid'];
  //echo $userid;
- //echo $flowerid;
- 
+
  if (empty($demouser)) {
   ?>
  
@@ -147,6 +146,7 @@ While($row=mysqli_fetch_array($result))
 	?>
 
 </select>
+<noscript><input type=”submit” value=”Submit”></noscript>
 </span>
 
 <input type="hidden" id= "user" name="user" value = "<?php echo $demouser; ?>">
@@ -156,7 +156,7 @@ While($row=mysqli_fetch_array($result))
 
 <form method="POST" action="make-flower.php">
 <input type="hidden" id= "user" name="user" value = "<?php echo $demouser; ?>">
-<input type="submit" id="submit" value="Add another flower" name="submit">
+<input type="submit" id="submit" value="Make another Infusion" name="submit">
 </form><br>
 
 
