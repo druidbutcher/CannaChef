@@ -6,14 +6,17 @@
 <link rel="stylesheet" href=".//css/style.css" />
 
 </head>
-<body>
+
 <?php
 
 
 $userid = $_POST["id"];
-$demouser = $_POST["user"];
-//echo $demouser;
-//echo $userid;
+$demouser = $_POST["demouser"];
+$recipeid = $_POST['recipeid'];
+$numberServings = $_POST['numberServings'];
+$thcPerServing = $_POST['thcPerServing'];
+$typeofat = $_POST['typeofat'];
+//echo $recipeid;
 if (empty($demouser)) {
  ?>
 
@@ -72,27 +75,31 @@ $fatty = $row['ingredient'];
 <form action="insert-flower.php" method="POST">
 <label for="flowername">Name your infusion:</label><br>
   <input type="text" id="flowername" name="flowername"><br>
-<h3> Choose the base ingredient you want to use.</h3>
+<h3> This is the ingredient for your infusion.</h3>
  <div class="container">
   <div id="radios">
+   <?php if ($typeofat == "butter"){ ?>
     <label for="butter" >
       <input type="radio" name="fat" id="butter" value="butter" checked/>
       <span>Butter</span>
+   <?php }elseif($typeofat=="oil"){ ?>
     </label>                
     <label for="oil">
-      <input type="radio" name="fat" id="oil" value="oil" />
+      <input type="radio" name="fat" id="oil" value="oil" checked />
       <span>Oil</span>
     </label>
+    <?php }else{ ?>
     <label for="tincture">
-      <input type="radio" name="fat" id="tincture" value="alcohol" />
+      <input type="radio" name="fat" id="tincture" value="alcohol" checked/>
       <span>Tincture</span>
     </label>
+    <?php } ?>
   </div>
 </div>
 <br>
 <label for="fatamount">Enter the amount you want to make , in cups:<br>we suggest 1 cup</label><br>
   <input type="text" id="fatamount" name="fatamount" value = "1"><br>
-<h2> Lets talk about your flower</h2>
+  <h2> Lets talk about your flower</h2>
   <label for="thcpercent">What is the % of THC in your flower?<br> We suggest minimum 20%</label><br>
   <input type="text" id="thcpercent" name="thcpercent" value="20"><br>
     <label for="amountflower">Enter the amount of flower you are using, in Grams<br>We suggest minimum 8 grams</label><br>
@@ -123,7 +130,7 @@ $fatty = $row['ingredient'];
       <span>Magic Butter Machine</span>
     </label>                
     <label for="slowcooker">
-      <input type="radio" name="infusion" id="slowcooker" value="slowcooker" checked />
+      <input type="radio" name="infusion" id="slowcooker" value="slowcooker" checked/>
       <span>Slow Cooker</span>
     </label>
     <label for="ardentfx">
@@ -138,14 +145,17 @@ $fatty = $row['ingredient'];
 </div>
 <br>
   
-<input type="hidden" id="numberServings" name="numberServings" value=<?php echo $numberServings?>>
+
+
+  <input type="hidden" id="numberServings" name="numberServings" value=<?php echo $numberServings?>>
   <input type="hidden" id="thcPerServing" name="thcPerServing" value=<?php echo $thcPerServing ?>>
   <input type="hidden" id="recipeid" name="recipeid" value=<?php echo $recipeid ?>>
   <input type="hidden" id= "id" name="id" value = "<?php echo $userid; ?>"> 
   <input type="hidden" id= "demouser" name="demouser" value = "<?php echo $demouser; ?>"> <br><br>
   <input type="hidden" id= "instructions" name="instructions" value = "instructions"> 
   <input type="submit" formaction="insert-flower.php" name="submit_type" value="Show Instructions">
-
+           
+       
 </form>
 </body>
 </html>

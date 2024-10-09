@@ -2,16 +2,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Choose Recipe</title>
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  text-align: center;
-}
+<title>View your Recipe</title>
 
-</style>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href=".//css/style.css" />
 
 </head>
 
@@ -20,16 +13,16 @@ table, th, td {
 
 
 
-session_start();
+
 $demouser= $_POST['user'];
 include ('fraction.php');
-
+//echo $demouser;
 if (empty($demouser)) {
   ?>
  
  <div class="navbar">
    <div class="dropdown">
-     <button class="dropbtn">Dropdown
+     <button class="dropbtn">Menu
        <i class="fa fa-caret-down"></i>
      </button>
      <div class="dropdown-content">
@@ -44,7 +37,7 @@ if (empty($demouser)) {
  <?php }else { ?>
   <div class="navbar">
    <div class="dropdown">
-     <button class="dropbtn">Dropdown
+     <button class="dropbtn">Demo Menu
        <i class="fa fa-caret-down"></i>
      </button>
      <div class="dropdown-content">
@@ -56,21 +49,25 @@ if (empty($demouser)) {
 <?php
 }
 
-  $userid = $_SESSION['id'];
+
+  $userid = $_POST['id'];
   $userflowerid = $_POST['userflowerid'];
   $numberServings = $_POST['numberServings'];
   $thcPerServing = $_POST['thcPerServing'];
-  $totalThc = $_POST['totalThc']  ;
+  $totalThc = $_POST['totalThc'] ;
+
+
 
     $totalThcPerRec = $numberServings * $thcPerServing;
     //divide by totalthc (in one cup) of flower
     $totalThcFatPerRec1 = $totalThcPerRec / $totalThc;
     $totalThcFatPerRec = number_format($totalThcFatPerRec1, 2);
     //echo ("This is the total amount of fat in cups needed").$totalThcFatPerRec;
+
     $roundup2 =  $totalThcFatPerRec * 8;
-    $midround2 = ceil($roundup2) ;
-    $totalThcRec = $midround2 / 8;  
-    
+    $midround2 = floor($roundup2) ;
+    $totalThcRec = $midround2 / 8; 
+ 
   if (empty($demouser)) {
     include('conn.php');
   }else{
@@ -78,7 +75,7 @@ if (empty($demouser)) {
   }
   $mysqli = new mysqli($hostname, $username, $password, $database);
   // Check connection
-  echo $database;
+  //echo $database;
 
   if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
@@ -103,8 +100,7 @@ $row = mysqli_fetch_assoc($result1);
 $recipeid=$row["recipeid"];
 $flowerid=$row["flowerid"];
 $directions = $row["directions"];
-//echo $recipeid;
-//echo $flowerid;
+
 $query2 = "SELECT * FROM flower WHERE flower.id ='$flowerid'";
 //echo $query2;
 $result2 = $mysqli->query($query2);
@@ -113,50 +109,52 @@ $flowerName = $row2["flowerName"];
 //echo $flowerName;
 
 echo '
-<table style="width:70%">
+
+<table >
 <tr>
   <th>Name</th>
   <th>Image</th>
   <th>Number of Servings</th>
   <th>THC per Serving</th>
-  <th>Total cup THC in recipe</th>
-  <th>Flower name</th>
+  <th>Infusion name</th>
 </tr>
 <tr>
 <td>'.$row["name"].'</td>
 <td><img src="'.$row["image"].'"width="100" height="100"></td>
 <td>'.$row["numberServings"].'</td>
-<td>'.$row["thcPerServing"].'</td>
-<td>'.$totalThcFatPerRec.' </td>
+<td>'.$row["thcPerServing"].'mgs</td>
 <td>'.$flowerName.'</td>
 </tr>
 </table>
 <br>
 '; 
-
+?><h2> Ingredients </h2> <?php
 $query = "SELECT * FROM recipeItems  WHERE recipeid ='$recipeid'";
 //echo $query;
 $result = $mysqli->query($query);
 While($row=mysqli_fetch_array($result))
- { 
+  {
 
 
 $roundup =  $row["amount"] * 8;
 $midround = ceil($roundup);
 $finalround = $midround / 8;
 
-
+$fatty = $row["isFat"];
+if ($fatty != 1){
+  
     echo '
   
     <tr>
-    <th>'.$row["ingredient"].'</th>
-    <td>'. $finalround.'</td>
+    <td>'.convert_decimal_to_fraction( $finalround).'</td>
     <td>'.$row["measure"].'</td>
     <td>'.$row["description"].'</td>
+    <th>'.$row["ingredient"].'</th>
+  
     </tr>
     <br>';
-    
-    $fatty = $row["isFat"];
+} 
+   
     $oldfat = $row["amount"];
     $roundup1 =  $oldfat * 8;
     $midround1 = ceil($roundup1);
@@ -164,60 +162,94 @@ $finalround = $midround / 8;
 
 
 
-if   ($fatty == 1){
- $tottbsp = $totalThcRec * 16;
+  if   ($fatty == 1){
+    $tottbsp = $totalThcRec * 16;
 
 
-if ($oldfat > 0){
-  if ($oldfat < $totalThcRec){
+    
+      if ($oldfat <= $totalThcRec){
+        ///die("Ima dead duck");
     ?>
-    <h2 style="color: red"> This will use more fat than your recipe needs </h2>
-    Either lower the thc % or make a stronger infusion!
-    <form method="POST" action="pick-flower.php">
+    <h2 style="color: red"> You cant make this recipe with this infusion </h2>
+    
+    Here are some things that can help<br>
+    1. Lower the amount in THC per serving<br>
+    2. Use more grams of flower in your infusion<br>
+    3. Use only 1 cup of base ingredient in your infusion<br>
+
+    <?php 
+    
+    if (empty($demouser)) { 
+      
+      ?>
+    <form method="POST" action="choose-path-user.php">
+    <input type="hidden" id= "id" name="id" value = "<?php echo $userid; ?>"> 
+    <input type="hidden" id= "user" name="user" value = "<?php echo $demouser; ?>">
     <input type="submit" id="submit" value="Try again" name="submit"><br>
+    <?php } else { 
+      
+      ?>
+  <form method="POST" action="wipeit.php">
+  <input type="hidden" id= "id" name="id" value = "<?php echo $userid; ?>"> 
+  <input type="hidden" id= "user" name="user" value = "<?php echo $demouser; ?>">
+  <input type="submit" id="submit" value="Go again?" name="submit"><br><br>
+  <?php } ?>
   <?php
+    
+  
     die();
+    }
+  ?>
+ 
+    <?php
+   
+    $newfat = $oldfat  -  $totalThcRec;
+    $roundup1 =  $newfat * 8;
+    $midround1 = floor($roundup1);
+    $finalround1 = $midround1 / 8;
+
+    echo "<br>".("Combine ").convert_decimal_to_fraction($finalround1);
+    echo (" ").$row["measure"].(" 'regular' ").$row["description"];
+    echo ("  ").$row["ingredient"]."<br>";
+  
+    echo ("With ").convert_decimal_to_fraction( $totalThcRec).("  cups or  ").convert_decimal_to_fraction( $tottbsp).("  Tbsp , of your THC infused ").$row["ingredient"]."<br><br>";
+    
+    ?>
+   
+    <?php
+    //echo ("This now gives you your   ").convert_decimal_to_fraction( $finalround).("  ").$row["measure"].("  of *Cannabis infused ").$row["ingredient"].("*  containing the correct mix of THC   ")."</h1>";
   }
-  ?>
-    <h1 style="font-size: 1rem; color: #ec3a13">
-    <?php
-    echo ("Fat adjustment!!")."</h1>";
-    $newfat = $finalround1  -  $totalThcRec;
-    echo ("Now combine:  ").$row["ingredient"];
-    echo ("  ").convert_decimal_to_fraction($newfat);
-    echo ("  ").$row["measure"].("  ").$row["description"]."<br>";
-    echo ("With   ").$row["ingredient"].("  containing THC :  ").convert_decimal_to_fraction( $totalThcRec).("  cups or  ").convert_decimal_to_fraction( $tottbsp).("  Tbsp ")."<br>";
     ?>
-    <h1 style="font-size: 1rem; color: blue">
-    <?php
-    echo ("This now gives you your   ").convert_decimal_to_fraction( $finalround).("  ").$row["measure"].("  of *Cannabis infused ").$row["ingredient"].("*  containing the correct mix of THC   ")."</h1>";
-}else{
-  ?>
-  <h1 style="font-size: 1rem; color: #ec3a13">
-  <?php
-  echo ("This is how much to use!!")."</h1>";
-  echo $row["ingredient"].("  containing THC :  ").convert_decimal_to_fraction( $totalThcRec).(" cups  or  ").convert_decimal_to_fraction( $tottbsp).("  Tbsp ");
-
-}
-    ?>
-    <br> <br>
+    
+    
     <?php
 
-}
-}
+  }
+
+?>
+<h2> Directions</h2>
+<?php
 echo nl2br($directions);
 if (empty($demouser)) {
 
  ?>
-  <form method="POST" action="pick-flower.php">
+  <form method="POST" action="choose-path-user.php">
+  <input type="hidden" id= "id" name="id" value = "<?php echo $userid; ?>"> 
+  <input type="hidden" id= "user" name="user" value = "<?php echo $demouser; ?>">
 <input type="submit" id="submit" value="Make another recipe" name="submit">
 </form><br>
 
   <?php
-  }else{
+    }else{
    ?>
   <form method="POST" action="wipeit.php">
+  <input type="hidden" id= "id" name="id" value = "<?php echo $userid; ?>"> 
+  <input type="hidden" id= "user" name="user" value = "<?php echo $demouser; ?>">
   <input type="submit" id="submit" value="Go again?" name="submit">
-<?php } ?>
+<?php } 
+unset($_SESSION["fatty"]);
+unset($_SESSION["recipeid"]);
+?>
+
   </body>
 </html>

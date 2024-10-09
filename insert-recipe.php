@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Your new Recipe</title>
+<link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
 <?php
-
   session_start();
 
   $userid = $_SESSION['id'];
@@ -15,7 +16,7 @@
   $image = $_POST['image'];
   $directions = $_POST['directions'];
   $numberServings = $_POST['numberServings'];
-
+ 
 
 $username = "root";
 $password = "root";
@@ -26,7 +27,7 @@ $mysqli = new mysqli("localhost:3306", $username, $password, $database);
 if ($mysqli->connect_error) {
   die("Connection failed: " . $mysqli->connect_error);
 }
-//echo "Connected successfully";
+echo "Connected successfully";
 
 
 

@@ -19,51 +19,63 @@
 }
 </style>
 <?php 
-
+ session_start(); 
  include('redirect.php');
  include('conn.php');
 
  if (isset($_POST['login'])) { 
- 
+
 // Connect to the database 
 $mysqli = new mysqli($hostname, $username, $password, $database);
 
 // Check for errors 
 if ($mysqli->connect_error) { die("Connection failed: " . $mysqli->connect_error); } 
-$username = $_POST['username']; 
-$password1 = $_POST['password']; 
 
-$query = "SELECT * FROM users where username = '$username' ";
-$result = $mysqli->query($query);
-$row = mysqli_fetch_array($result);
-$id = $row["id"];
-$password = $row["password"];
+// Prepare and bind the SQL statement 
+$stmt = $mysqli->prepare("SELECT id, password FROM users WHERE username = ?"); $stmt->bind_param("s", $username); 
+
+// Get the form data 
+$username = $_POST['username']; $password = $_POST['password']; 
+
+// Execute the SQL statement 
+$stmt->execute(); $stmt->store_result(); 
 
 // Check if the user exists 
-if ($row["username"] > 0) { 
+if ($stmt->num_rows > 0) { 
+
+// Bind the result to variables 
+$stmt->bind_result($id, $hashed_password); 
+
+// Fetch the result 
+$stmt->fetch(); 
 
 // Verify the password 
-//if ($row["password"] == $password1) {
+if (password_verify($password, $hashed_password)) { 
 
+// Set the session variables 
+$_SESSION['loggedin'] = true; 
+$_SESSION['id'] = $id; 
+$_SESSION['username'] = $username; 
+$id = $_SESSION['id'];
 // Redirect to the user's dashboard
-RedirectWithMethodPost("choose-path-user.php?id=$id"); 
+RedirectWithMethodPost("choose-path-user.php?userid=$id"); 
 //header("Location: make-flower.php"); 
-exit; }
-/*} else {
+exit; 
+} else {
    echo "Incorrect password!";
    } 
   } else { 
     echo "User not found!"; } 
-    */
-  }
 
+// Close the connection 
+$stmt->close(); $mysqli->close(); }
 ?>
 <meta charset="UTF-8">
 <title>Login</title>
 </head>
 
 <body>
-<form action="Login.php" method="post">
+<form action="Login1.php" method="post">
 <input type="hidden" id="id">
   <label for="username">Username:</label>
   <input id="username" name="username" required="" type="text" />

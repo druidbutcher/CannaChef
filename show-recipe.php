@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Choose Recipe</title>
+<title>Show your Recipe</title>
 <style>
 table, th, td {
   border: 1px solid black;
@@ -130,7 +130,6 @@ echo '
 <td><img src="'.$row["image"].'"width="100" height="100"></td>
 <td>'.$numberServings.'</td>
 <td>'.$thcPerServing.'</td>
-<td>'.$totalThcFatPerRec.' </td>
 <td>'.$flowerName.'</td>
 </tr>
 </table>
@@ -145,31 +144,34 @@ While($row=mysqli_fetch_array($result2))
     $roundup =  $row["amount"] * 8;
     $midround = ceil($roundup);
     $finalround = $midround / 8;
+// if ifat =1 dont show here, show below
+$fatty = $row["isFat"];
 
+if ($fatty != 1){
     echo '
   
     <tr>
     <th>'.$row["ingredient"].'</th>
-    <td>'.$finalround.'</td>
+    <td>'.convert_decimal_to_fraction( $finalround).'</td>
     <td>'.$row["measure"].'</td>
     <td>'.$row["description"].'</td>
     </tr>
     <br>';
 
-        
-    $fatty = $row["isFat"];
-    $oldfat = $row["amount"];
-    $roundup1 =  $oldfat * 8;
-    $midround1 = ceil($roundup1);
-    $finalround1 = $midround1 / 8;
+$roundup =  $row["amount"] * 8;
+$midround = ceil($roundup);
+$finalround = $midround / 8;
+}
+
+
+
 
     if   ($fatty == 1){
       $tottbsp = $totalThcRec * 16;
      
      
      if ($oldfat > 0){
-      echo $oldfat;
-      echo $totalThcRec;
+  
        if ($oldfat < $totalThcRec){
          ?>
          <h2 style="color: red"> This will use more fat than your recipe needs </h2>
@@ -177,18 +179,21 @@ While($row=mysqli_fetch_array($result2))
          <form method="POST" action="pick-flower.php">
          <input type="submit" id="submit" value="Try again" name="submit"><br>
        <?php
-         die();
+         die("Bummer Dude");
        }
        ?>
-         <h1 style="font-size: 1rem; color: #ec3a13">
+        
          <?php
-         echo ("Fat adjustment!!")."</h1>";
+      
          $newfat = $finalround1  -  $totalThcRec;
-         echo ("Now Use:  ").$row["ingredient"];
+         echo $row["ingredient"];
          echo ("  ").convert_decimal_to_fraction($newfat);
          echo ("  ").$row["measure"].("  ").$row["description"]."<br>";
-         echo $row["ingredient"].("  containing THC :  ").convert_decimal_to_fraction( $totalThcRec).("  cups or  ").convert_decimal_to_fraction( $tottbsp).("  Tbsp ");
-        
+         echo ("Your infused  THC ").$row["ingredient"].("    ").convert_decimal_to_fraction( $totalThcRec).("  cups or  ").convert_decimal_to_fraction( $tottbsp).("  Tbsp ")."<br>";
+         ?>
+         <h1 style="font-size: 1rem; color: blue">
+         <?php
+         echo ("This now gives you your   ").convert_decimal_to_fraction( $finalround).("  ").$row["measure"].("  of *Cannabis infused ").$row["ingredient"].("*  containing the correct mix of THC   ")."</h1>";
      }else{
        ?>
        <h1 style="font-size: 1rem; color: #ec3a13">
@@ -198,11 +203,14 @@ While($row=mysqli_fetch_array($result2))
      
      }
          ?>
-         <br> <br>
+         
          <?php
-     
+    }
      }
-     }
+   
+     ?>
+<h2> Directions</h2>
+<?php
 echo nl2br($directions);
 
   ?>

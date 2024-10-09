@@ -2,7 +2,11 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/style.css" />
+
 <?php 
+// Error check email it has to be different!!!!!!!!!!!!!!!!!!!
+include('redirect.php');
+if (isset($_POST['register'])) {
 include('conn.php');
 $mysqli = new mysqli($hostname, $username, $password, $database);
 // Check connection
@@ -11,26 +15,29 @@ if ($mysqli->connect_error) {
 }else{
 echo ("good connection!");
 }
-echo $database;
+//echo $database;
 
 // Get the form data 
 $username = $_POST['username']; 
 $email = $_POST['email']; 
 $password = $_POST['password']; 
 echo $username;
-echo $email;
-echo $password;
+//echo $email;
+//echo $password;
 // Hash the password 
 $password = password_hash($password, PASSWORD_DEFAULT); 
 //Insert 
-$query = "INSERT INTO users (username, email, users.password) VALUES ('$username', '$email', '$password')";
-//echo $query;
+
+$query = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+echo $query;
 if (mysqli_query($mysqli, $query)) {
   echo "New record created successfully. ";
 } else {
   echo "Error: " . $query . "<br>" . mysqli_error($mysqli);
 }
-
+//goto login
+RedirectWithMethodPost("Login.php?user=''");
+}
 
 ?>
 <meta charset="UTF-8">
@@ -51,5 +58,9 @@ if (mysqli_query($mysqli, $query)) {
 <form method="POST" action="Login.php">
 <input type="submit" id="submit" value="Login" name="submit">
 </form><br>
+<?php 
+
+
+?>
 </body>
 </html>

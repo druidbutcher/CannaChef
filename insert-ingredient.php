@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>insert ingredients</title>
+<link rel="stylesheet" href="css/style.css" />
+
 </head>
 <body>
  
@@ -139,5 +141,8 @@ $result1 = $mysqli->query($query2);
   <input type="text" id="recipeid" name="recipeid" value =  <?php echo $recipeid; ?>  ><br>
   <input type="submit" value="Submit">
 </form>
+<form method="POST" action="pick-recipe-2view.php">
+<input type="submit" id="submit" value="All Done" name="submit">
+</form><br>
 </body>
 </html>

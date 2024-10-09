@@ -20,16 +20,14 @@ input[type=submit] {
 <body>
  <?php
  
-
-  $demouser = $_POST['user'];
+session_start();
+  $demouser = $_POST['demouser'];
   $userid = $_POST['id'];
-  $flowerid = $_POST['flowerid'];
   $recipeid = $_POST['recipeid'];
-//echo $flowerid;
-//die("ima dead");
-echo $demouser;
-echo $userid;
-
+  $typeofat = $_POST['typeofat']  ;
+  //echo $typeofat;
+//echo $demouser;
+//echo $userid;
   if (empty($demouser)) {
     include('conn.php');
   }else{
@@ -44,14 +42,7 @@ echo $userid;
   }else{
   //echo ("good connection!");
   }
-  $query = "INSERT INTO userflower (userid, flowerid, recipeid) VALUES ('$userid', '$flowerid', '$recipeid')";
-//echo $query;
-if (mysqli_query($mysqli, $query)) {
-    $last_id = mysqli_insert_id($mysqli);
- // echo "New record created successfully";
-} else {
-  echo "Error: " . $query . "<br>" . mysqli_error($mysqli);
-}
+ 
 
 //select recipe
 $query1 = "SELECT * FROM recipe where recipe.id = '$recipeid'";
@@ -63,20 +54,12 @@ if (mysqli_query($mysqli, $query1)) {
 $result = $mysqli->query($query1);
 $row = mysqli_fetch_assoc($result);
 
-//select flower
-$query2 = "SELECT * FROM flower where flower.id = '$flowerid'";
-if (mysqli_query($mysqli, $query2)) {
-  //echo "Got the flower";
-} else {
-  echo "Error: " . $query2 . "<br>" . $mysqli->error;
-}
-$result2 = $mysqli->query($query2);
-$row2 = mysqli_fetch_assoc($result2);
+
 
 //pass variables lastid for the userflower so we can update numberServings , thcPerserving, thcFatAmount
 
   ?>
-  <form action="view-recipe.php" method="POST">
+  <form action="pick-recipe-4.php" method="POST">
   
   <h3><?php echo $row['name']; ?> </h3><br>
     <img src="<?php echo $row["image"]; ?>"width="100" height="100"><br>
@@ -85,11 +68,12 @@ $row2 = mysqli_fetch_assoc($result2);
       <label for="thcPerServing">Enter how many mgs of THC do you want in each<br> <?php echo $row['name']; ?><br><label>
   <input type="text" id="thcPerServing" name="thcPerServing"><br>
   *10mg is nice and easy*
-  <input type="hidden" id="userflowerid" name="userflowerid" value = "<?php echo $last_id; ?>"><br>
-  <input type="hidden" id="totalThc" name="totalThc" value = "<?php echo $row2['totalThc']; ?>"><br>
-  <input type="hidden" id= "user" name="user" value = "<?php echo $demouser; ?>">
+
+  <input type="hidden" id= "recipeid" name="recipeid" value = "<?php echo $recipeid; ?>">
+  <input type="hidden" id= "typeofat" name="typeofat" value = "<?php echo $typeofat; ?>">
   <input type="hidden" id= "id" name="id" value = "<?php echo $userid; ?>"> 
-  <input type="submit" id="submit" value="Lets see it!!" name="submit">
+  <input type="hidden" id= "demouser" name="demouser" value = "<?php echo $demouser; ?>"><br><br>     
+  <input type="submit" id="submit" value="Lets make an infusion!!" name="submit">
 </form>
 </body>
 </html>
