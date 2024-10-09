@@ -63,11 +63,23 @@ if (empty($demouser)) {
     $totalThcFatPerRec1 = $totalThcPerRec / $totalThc;
     $totalThcFatPerRec = number_format($totalThcFatPerRec1, 2);
     //echo ("This is the total amount of fat in cups needed").$totalThcFatPerRec;
-
+     //error trap for to small of a rounded number lees than 0,125
+     $lonum = 0.125;
+     $lonum = number_format($lonum, 2);
+     echo $lonum."lonum<br>";
+     echo $totalThcFatPerRec;
+if ($totalThcFatPerRec < $lonum){
+  //die("ima dead one");
+  $roundup2 =  $totalThcFatPerRec * 32;
+  $midround2 = floor($roundup2) ;
+  $totalThcRec = $midround2 / 32; 
+}else{
     $roundup2 =  $totalThcFatPerRec * 8;
     $midround2 = floor($roundup2) ;
     $totalThcRec = $midround2 / 8; 
- 
+  
+  }
+ //die("whats the number");
   if (empty($demouser)) {
     include('conn.php');
   }else{
